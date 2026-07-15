@@ -1,0 +1,45 @@
+# Virtual environments
+venv/
+.env
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Editor and system files
+*.swp
+*.DS_Store
+
+# Input data — large or externally downloaded; users place these themselves.
+# See README "Setup: input data" for how to obtain them.
+data/worldbank.zip
+data/worldbank/
+data/worldbank-zip/
+data/worldbank_extracted/
+data/benchmarks/*.csv
+!data/benchmarks/SOURCES.md
+
+# Run logs (corpus extraction, generators) — local diagnostics
+logs/
+
+# Generator intermediates — big and regenerable. Final datasets are flat
+# files at the data/ root: data/in-scope-prompts-final.jsonl,
+# data/out-of-scope-prompts-final.jsonl (these ARE committed).
+data/in-scope/
+data/out-of-scope/
+data/in-domain/
+
+# Archived raw generator output (committed flat files in data/legacy/ are kept;
+# only the subdirs of raw intermediates are ignored).
+data/legacy/*/
+
+# Embedding caches (per-embedder, regenerable)
+*_chunk_embeddings__*.npy
+*_chunk_embeddings__*.meta.json
+
+# Live run outputs (work-in-progress writes by run_layer.py go here; promote to results/ when done)
+outputs/
+
+# Results dir IS tracked — these are the curated final responses + scores + plots for the report.
+!results/

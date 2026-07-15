@@ -1,0 +1,28 @@
+# Core
+python-dotenv
+openai
+litellm
+httpx
+tenacity
+tqdm
+pandas
+matplotlib
+
+# Generators / scorers
+huggingface_hub
+sentence-transformers
+transformers
+accelerate
+datasets
+ragas>=0.4.3
+langchain-text-splitters
+langchain-core
+instructor
+thefuzz
+seaborn
+
+# Corpus pipeline (World Bank PDF fetch + extract)
+pymupdf>=1.24
+pymupdf4llm>=0.0.17
+pdfplumber>=0.11
+requests
